@@ -12,8 +12,8 @@ const app = express()
 app.use(cors())
 app.use(express.json({ limit: '50mb' }))
 
-app.use('/api/posts', postRoutes)
-app.use('/api/dalle', dalleRoutes)
+app.use('/api/v1/posts', postRoutes)
+app.use('/api/v1/dalle', dalleRoutes)
 
 app.get('/', async (req, res) => {
 	res.send('Hello from your AI server!')
